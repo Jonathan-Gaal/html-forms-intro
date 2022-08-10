@@ -8,5 +8,185 @@
   </head>
   <body>
     <h1>Forms Introduction</h1>
+    <!--The form tag indicates that everything between the opening and closing is part of the form and can be sent to the database-->
+
+    <form> 
+      <!--label and form are INLINE elements-->
+
+      <!--label for attribute and input id attibute must match when clicking on the label, the cursor will blink in the input box-->
+
+      <!--Field for firstname-->
+
+      <!--fieldset puts a box around what you want grouped as a fieldset -- e.g firstname, lastname, phone#, surrounds a grouping of information-->
+      <fieldset>
+
+        <!--legenf gives a title to that gouping- fieldset-->
+
+        <legend> <strong>Gather Basic Information</strong> </legend>
+      <p>
+      <label for="fname"> First Name: 
+      </label>
+      <input id = "fname" type="text"
+      placeholder="First Name" />
+      </p>
+
+      <!--Field for Last Name-->
+
+      <p>
+      <label for="lname"> Last Name: 
+      </label>
+      <input id = "lname" type="text"
+      placeholder="Last Name" />
+      </p>
+
+      <!--Field for Phone 3-->
+
+      <p>
+      <label for= "phone"> Phone Number:*
+      </label>
+      <input id = "phone" type= "TEL"
+      placeholder= "222-222-2222" 
+      required 
+      />
+      </p>
+      </fieldset>
+
+     
+        <fieldset>
+        <legend>Create Your Password
+        </legend>
+        <p>
+          <label for="pass1">Password
+          </label>
+          <input type="password"
+          id = "pass1" name ="pass1"
+          required />
+        </p>
+        <!--Confirm Password-->
+
+        <p>
+          <label for="pass2">Confirm Password
+          </label>
+          <input type="password"
+          id = "pass2" name ="pass2"
+         required />
+        </p>
+        
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Give Us Your Email and the Date You Want to Reserve
+          </legend>
+          <p>
+          <label for="email">Email:
+          </label>
+          <input type="email"
+          id = "email" name ="email"
+          required/>
+          </p>
+          <p>
+            <label for="date">Reservation Date:
+            </label>
+            <input type="date"
+            id = "date"
+            name = "date">
+          </p>
+        </fieldset>
+
+<fieldset>
+
+  <!--the name attribute for radio buttons must be the same for the buttons to be associated --->
+
+  <!-- radio buttons must have a value attribute to send to the database-->
+  <legend>Radio Buttons  
+  </legend>
+  <h3>Are You a Day Person or a Night Person?</h3>
+  Day 
+  <input type="radio"
+  id = "day" name = "pickTwo" value = "day" 
+  checked
+  />
+
+  Night 
+  <input type="radio"
+  id = "night" name = "pickTwo" value = "night" >
+</fieldset>
+
+<fieldset>
+  <legend>
+    Checkboxes
+  </legend>
+
+<h3>Which of these Foods do you Like? (Choose all that apply)</h3>
+<input 
+type="checkbox" 
+id="cereal" 
+name="cereal" 
+value  ="cereal" 
+/>&nbsp;Cereal <br />
+
+<input 
+type="checkbox" 
+id="steak" 
+name="steak" 
+value  ="steak" 
+/>&nbsp;Steak <br />
+
+<input
+type="checkbox" 
+id="waffles" 
+name="waffles" 
+value  ="waffles" 
+/>&nbsp;Waffles <br />
+
+<input 
+type="checkbox" 
+id="lamb" 
+name="lamb" 
+value  ="lamb" 
+/>&nbsp;Lamb <br />
+</fieldset>
+
+<fieldset>
+  <!--Dropdowns need a select attribute instead of input-->
+  <legend>
+    Dropdown
+  </legend>
+  <h3>Where Do You Want To Go On Vacation?</h3>
+  <select 
+  name="vacations" id="vacations">
+  <option value="alaska">Alaska</option>
+  <option value="borabora">Bora Bora</option>
+  <option value="cancun">Cancun</option>
+  <option value="hawaii">Hawaii</option>
+  <option value="tulum">Tulum</option>
+</select>
+</fieldset>
+
+        <br />
+        <!--Submit Button-->
+        
+        <!--when clicking the submit button , the page will automatically re-render-->
+        
+        <!---->
+        <button type="submit" disabled> Submit
+        </button>
+
+        <br /><br /><br />
+
+        <fieldset>
+          <legend>
+            Please tell us how we did!
+          </legend>
+
+          <!--text area gives us two 2 new attr. rows and columns.-->
+          <textarea name="comment" id="comment"
+           cols="50" rows="10"></textarea>
+        </fieldset>
+        <br />
+
+
+    </form>
   </body>
 </html>
